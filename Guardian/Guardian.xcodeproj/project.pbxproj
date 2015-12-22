@@ -19,6 +19,7 @@
 		7F4629961C296B9700ED2CAF /* CheckPointTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */; };
 		AE7199841C29746D00B1C8BB /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7199831C29746D00B1C8BB /* Check.m */; };
 		AE7199871C2977AE00B1C8BB /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7199861C2977AE00B1C8BB /* Tour.m */; };
+		AE71998D1C297EF600B1C8BB /* CheckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE71998C1C297EF600B1C8BB /* CheckVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		AE7199831C29746D00B1C8BB /* Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Check.m; sourceTree = "<group>"; };
 		AE7199851C2977AE00B1C8BB /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
 		AE7199861C2977AE00B1C8BB /* Tour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tour.m; sourceTree = "<group>"; };
+		AE71998B1C297EF600B1C8BB /* CheckVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckVC.h; sourceTree = "<group>"; };
+		AE71998C1C297EF600B1C8BB /* CheckVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				7F4629921C29550800ED2CAF /* PointsVC.m */,
 				7F4629941C296B9700ED2CAF /* CheckPointTableCell.h */,
 				7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */,
+				AE71998B1C297EF600B1C8BB /* CheckVC.h */,
+				AE71998C1C297EF600B1C8BB /* CheckVC.m */,
 			);
 			path = Guardian;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */,
 				7F4629931C29550800ED2CAF /* PointsVC.m in Sources */,
 				AE7199871C2977AE00B1C8BB /* Tour.m in Sources */,
+				AE71998D1C297EF600B1C8BB /* CheckVC.m in Sources */,
 				7F4629741C293EA100ED2CAF /* main.m in Sources */,
 				7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */,
 			);

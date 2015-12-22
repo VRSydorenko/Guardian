@@ -41,6 +41,24 @@
             </objects>
             <point key="canvasLocation" x="265" y="350"/>
         </scene>
+        <!--CheckVC-->
+        <scene sceneID="CrL-IB-5yL">
+            <objects>
+                <viewController id="Mcg-Pg-3g9" customClass="CheckVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hKd-rt-q1O"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pkv-ew-8XY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2pl-hz-Iq8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUq-tn-8rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="-302"/>
+        </scene>
         <!--PointsVC-->
         <scene sceneID="ird-4k-R0P">
             <objects>
