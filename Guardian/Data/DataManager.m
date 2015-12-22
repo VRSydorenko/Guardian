@@ -42,18 +42,50 @@
           if (data.length > 0 && connectionError == nil)
           {
               NSDictionary *values = [NSJSONSerialization JSONObjectWithData:data
-                                                                       options:0
-                                                                         error:NULL];
-              values;
-              NSMutableArray *points = [[NSMutableArray alloc] init];
-              for (int i = 0; i < 5; i++)
+                                                                     options:0
+                                                                       error:NULL];
+              
+              // id
+              int tourId = [[values objectForKey:@"id"] intValue];
+              
+              // points
+              NSData *pointData = [values objectForKey:@"tourCheckpoints"];
+              if (pointData != nil)
               {
-                  CheckPoint *point = [[CheckPoint alloc] init];
-                  point.Name = @"Name from data";
+                  NSMutableArray *points = [[NSMutableArray alloc] init];
+                  for (NSDictionary *pointDict in pointData)
+                  {
+                      int checkId = [[pointDict objectForKey:@"id"] intValue];
+                      
+                      NSDictionary *checkpointData = [pointDict objectForKey:@"checkpoint"];
+                      int actPointId = [[checkpointData objectForKey:@"id"] intValue];
+                      NSString *pointName = [checkpointData objectForKey:@"name"];
+                      
+                      NSString *pointStatus = [pointDict objectForKey:@"status"];
+                      NSString *pointTimeStr = [pointDict objectForKey:@"timestamp"];
+                      if (pointTimeStr != nil && ![pointTimeStr isKindOfClass:[NSNull class]] && [pointTimeStr length] > 0)
+                      {
+                          NSDate *time = [[NSDate alloc] init]; // later
+                      }
+                      else {
+                          pointTimeStr = @"";
+                      }
+                      NSString *pointComment = [pointDict objectForKey:@"comment"];
+                      if (pointComment != nil && ![pointComment isKindOfClass:[NSNull class]] && [pointComment length] > 0)
+                      {
+                          pointComment = @""; // later
+                      }
+                      else {
+                          pointComment = @"";
+                      }
+                      
+                      CheckPoint *pt = [[CheckPoint alloc] init];
+                      pt.Name = pointName;
+                      
+                      [points addObject:pt];
+                  }
+                  tour = [[Tour alloc] initWith:points];
               }
-              
-              tour = [[Tour alloc] initWith:points];
-              
               //[[data objectForKey:@"id"] stringValue];
           }
       }];
