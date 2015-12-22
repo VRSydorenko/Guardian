@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonTour;
 - (IBAction)onButtonTour:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelTourStartTime;
 
 @end
 

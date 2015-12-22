@@ -28,8 +28,12 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *buttonTitle = tour == nil ? @"Start" : @"Continue";
-        [_buttonTour setTitle:buttonTitle forState:UIControlStateNormal];
-        _buttonTour.hidden = NO;
+        [self.buttonTour setTitle:buttonTitle forState:UIControlStateNormal];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"HH:MM dd.mm.yy"];
+        NSString *formattedDate = tour.StartTime == nil ? @"" : [formatter stringFromDate:tour.StartTime];
+        self.labelTourStartTime.text = [NSString stringWithFormat:@"Started at %@", formattedDate];
     });
 }
 
@@ -37,7 +41,6 @@
 {
     if ([dataManager getCurrentTour] != nil)
     {
-        
     }
     else
     {

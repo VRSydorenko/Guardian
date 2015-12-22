@@ -19,7 +19,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-34-bng">
-                                <rect key="frame" x="233" y="275" width="135" height="49"/>
+                                <rect key="frame" x="174" y="275" width="252" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="n5k-uc-QHo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Loading..."/>
                                 <connections>
@@ -27,15 +30,34 @@
                                     <segue destination="UEW-YR-jnK" kind="show" identifier="segueMainToTour" id="Aed-9q-c4E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJh-Q8-htz">
+                                <rect key="frame" x="168" y="332" width="265" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="GSp-bz-Ysb"/>
+                                    <constraint firstAttribute="width" constant="265" id="JoI-iz-uJN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Asq-34-bng" firstAttribute="centerX" secondItem="Mzj-1F-1HV" secondAttribute="centerX" id="jSL-3e-SAW"/>
-                            <constraint firstItem="Asq-34-bng" firstAttribute="centerY" secondItem="Mzj-1F-1HV" secondAttribute="centerY" id="wVM-R7-Brj"/>
+                            <constraint firstItem="xJh-Q8-htz" firstAttribute="top" secondItem="Asq-34-bng" secondAttribute="bottom" constant="8" symbolic="YES" id="8CH-kK-nJb"/>
+                            <constraint firstItem="xJh-Q8-htz" firstAttribute="top" secondItem="Asq-34-bng" secondAttribute="bottom" id="Dvy-M8-zjQ"/>
+                            <constraint firstItem="Asq-34-bng" firstAttribute="centerX" secondItem="Mzj-1F-1HV" secondAttribute="centerX" id="gM6-XJ-a5n"/>
+                            <constraint firstItem="Asq-34-bng" firstAttribute="centerY" secondItem="Mzj-1F-1HV" secondAttribute="centerY" id="gy0-uI-EXu"/>
+                            <constraint firstItem="xJh-Q8-htz" firstAttribute="centerX" secondItem="Asq-34-bng" secondAttribute="centerX" id="qKh-3z-mhJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dvy-M8-zjQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="buttonTour" destination="Asq-34-bng" id="tXN-p8-BhR"/>
+                        <outlet property="labelTourStartTime" destination="xJh-Q8-htz" id="mbV-mT-3fP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
