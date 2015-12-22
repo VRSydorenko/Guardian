@@ -31,8 +31,15 @@
     });
 }
 
-- (IBAction)onButtonDown:(id)sender {
-    [sender setTitle:@"Hello" forState:UIControlStateNormal];
+- (IBAction)onButtonTour:(id)sender
+{
+    if ([dataManager getCurrentTour] != nil)
+    {
+        
+    }
+    else
+    {
+        [dataManager startTour];
+    }
 }
-
 @end

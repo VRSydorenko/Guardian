@@ -11,20 +11,11 @@
 
 @implementation DataManager
 
--(id)init
-{
-    if (self = [super init])
-    {
-        
-    }
-    return self;
-}
-
 -(void)getTour
 {
     if (currentTour == nil)
     {
-        [self fetchTour];
+        [self fetchTour:@"http://hack.innofriends.at:8080/tour"];
     }
     else
     {
@@ -32,16 +23,30 @@
     }
 }
 
-- (void)fetchTour;
+-(Tour*)getCurrentTour
+{
+    return currentTour;
+}
+
+-(void)startTour
+{
+    if (currentTour != nil)
+    {
+        return;
+    }
+    
+    [self fetchTour:@"http://hack.innofriends.at:8080/tour/start"];
+}
+
+- (void)fetchTour:(NSString*)url;
 {
     __block Tour *tour;
     
-    NSString *strURL = @"http://hack.innofriends.at:8080/tour";
     NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
-    NSString *result = [strURL stringByAddingPercentEncodingWithAllowedCharacters:set];
+    NSString *result = [url stringByAddingPercentEncodingWithAllowedCharacters:set];
     
-    NSURL *url = [NSURL URLWithString:result];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURL *nsUrl = [NSURL URLWithString:result];
+    NSURLRequest *request = [NSURLRequest requestWithURL:nsUrl];
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *connectionError)
@@ -70,7 +75,7 @@
                       
                       NSString *pointStatus = [pointDict objectForKey:@"status"];
                       NSString *pointTimeStr = [pointDict objectForKey:@"timestamp"];
-                      if (pointTimeStr != nil && ![pointTimeStr isKindOfClass:[NSNull class]] && [pointTimeStr length] > 0)
+                      if (pointTimeStr != nil && ![pointTimeStr isKindOfClass:[NSNull class]])
                       {
                           NSDate *time = [[NSDate alloc] init]; // later
                       }

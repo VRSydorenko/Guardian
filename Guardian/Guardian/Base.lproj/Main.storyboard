@@ -22,6 +22,9 @@
                                 <rect key="frame" x="233" y="275" width="135" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Loading..."/>
+                                <connections>
+                                    <action selector="onButtonTour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b04-jo-QKm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

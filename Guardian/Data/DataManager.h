@@ -22,5 +22,7 @@
 @property id<RemoteDataDelegate> delegate;
 
 -(void)getTour;
+-(Tour*)getCurrentTour;
+-(void)startTour;
 
 @end

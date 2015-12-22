@@ -16,6 +16,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonTour;
+- (IBAction)onButtonTour:(id)sender;
 
 @end
 
