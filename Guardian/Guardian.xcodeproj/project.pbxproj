@@ -17,6 +17,7 @@
 		7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298F1C294E4000ED2CAF /* CheckPoint.m */; };
 		7F4629931C29550800ED2CAF /* PointsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629921C29550800ED2CAF /* PointsVC.m */; };
 		7F4629961C296B9700ED2CAF /* CheckPointTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */; };
+		7F4629991C29863A00ED2CAF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629981C29863A00ED2CAF /* DataManager.m */; };
 		AE7199841C29746D00B1C8BB /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7199831C29746D00B1C8BB /* Check.m */; };
 		AE7199871C2977AE00B1C8BB /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7199861C2977AE00B1C8BB /* Tour.m */; };
 		AE71998D1C297EF600B1C8BB /* CheckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AE71998C1C297EF600B1C8BB /* CheckVC.m */; };
@@ -41,6 +42,8 @@
 		7F4629921C29550800ED2CAF /* PointsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsVC.m; sourceTree = "<group>"; };
 		7F4629941C296B9700ED2CAF /* CheckPointTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPointTableCell.h; sourceTree = "<group>"; };
 		7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPointTableCell.m; sourceTree = "<group>"; };
+		7F4629971C29863A00ED2CAF /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		7F4629981C29863A00ED2CAF /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		AE7199821C29746D00B1C8BB /* Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Check.h; sourceTree = "<group>"; };
 		AE7199831C29746D00B1C8BB /* Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Check.m; sourceTree = "<group>"; };
 		AE7199851C2977AE00B1C8BB /* Tour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tour.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 			children = (
 				7F46298A1C294C7300ED2CAF /* CheckPoints.h */,
 				7F46298B1C294C7300ED2CAF /* CheckPoints.m */,
+				7F4629971C29863A00ED2CAF /* DataManager.h */,
+				7F4629981C29863A00ED2CAF /* DataManager.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				AE7199871C2977AE00B1C8BB /* Tour.m in Sources */,
 				AE71998D1C297EF600B1C8BB /* CheckVC.m in Sources */,
 				7F4629741C293EA100ED2CAF /* main.m in Sources */,
+				7F4629991C29863A00ED2CAF /* DataManager.m in Sources */,
 				7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
