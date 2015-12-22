@@ -28,14 +28,6 @@ public class TourController {
     @Autowired
     private TourCheckpointRepository tourCheckpointRepository;
 
-
-    @RequestMapping(value = "/{tour_id}/beacon/{beacon_id}/reached", method = RequestMethod.GET)
-    @ResponseBody
-    public String finishIncident(@PathVariable("tour_id") final String tourId, @PathVariable("beacon_id") final String beaconId) {
-        final List<Tour> tours = tourRepository.findByActive(true);
-        return "tour: "+tourId+", beacon: "+tours.size();
-    }
-
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public Tour getActiveTour() {
@@ -91,7 +83,7 @@ public class TourController {
         return null;
     }
 
-    @RequestMapping(value = "/tour_checkpoints", method = RequestMethod.POST)
+    @RequestMapping(value = "/checkpoints", method = RequestMethod.POST)
     @ResponseBody
     public TourCheckpoint saveTourCheckpoint(@RequestBody TourCheckpoint tourCheckpoint) {
         TourCheckpoint dbTourCheckpoint = tourCheckpointRepository.findOne(tourCheckpoint.getId());
