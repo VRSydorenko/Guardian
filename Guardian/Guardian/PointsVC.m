@@ -27,11 +27,17 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CheckPointTableCell* cell = [[CheckPointTableCell alloc] init];
+    static NSString *CellIdentifier = @"CheckCellIdentifier";
+    CheckPointTableCell *cell = (CheckPointTableCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    
+    if (cell == nil) {
+        cell = [[CheckPointTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
     CheckPoint *point = [[points get] objectAtIndex:indexPath.row];
     
-    cell.labelName.text = point.Name;
+    [cell.labelName setText:point.Name];
     
     return cell;
 }
