@@ -10,7 +10,10 @@
 #import "CheckPoint.h"
 
 @interface CheckPoints : NSObject
+{
+     NSMutableArray *points;
+}
 
--(NSDictionary*)get;
+-(NSArray*)get;
 
 @end

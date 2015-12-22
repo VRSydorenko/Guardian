@@ -10,15 +10,22 @@
 
 @implementation PointsVC
 
+-(void)viewDidLoad{
+    points = [[CheckPoints alloc] init];
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [[points get] count];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = @"Hello";
+    
+    CheckPoint *point = [[points get] objectAtIndex:indexPath.row];
+    cell.textLabel.text = point.Name;
+    
     return cell;
 }
 

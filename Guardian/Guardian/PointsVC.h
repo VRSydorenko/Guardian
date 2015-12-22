@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CheckPoints.h"
 
 @interface PointsVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    CheckPoints *points;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *pointsTable;
 
