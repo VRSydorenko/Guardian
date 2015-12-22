@@ -37,10 +37,15 @@
 */
 
 - (IBAction)OnOk:(id)sender {
-    _check.Status = OK;
+    [self Save:OK];
 }
 
 - (IBAction)OnNok:(id)sender {
-    _check.Status = NOK;
+    [self Save:NOK];
+}
+
+-(void)Save:(int)status{
+    _check.Status = status;
+    _check.Comment = _textComment.text;
 }
 @end

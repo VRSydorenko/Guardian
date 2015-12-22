@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonOK;
 @property (weak, nonatomic) IBOutlet UIButton *buttonNOK;
 
-@property (weak, nonatomic) IBOutlet UITextField *textComment;
+@property (weak, nonatomic) IBOutlet UITextView *textComment;
 
 
 @property Check *check;
@@ -24,5 +24,7 @@
 - (IBAction)OnOk:(id)sender;
 
 - (IBAction)OnNok:(id)sender;
+
+- (void)Save:(int)status;
 
 @end
