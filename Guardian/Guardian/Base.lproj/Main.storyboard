@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1839" y="343"/>
         </scene>
-        <!--PointsVC-->
+        <!--ChecksVC-->
         <scene sceneID="ird-4k-R0P">
             <objects>
-                <viewController id="UEW-YR-jnK" customClass="PointsVC" sceneMemberID="viewController">
+                <viewController id="UEW-YR-jnK" customClass="ChecksVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SY7-Ju-paw"/>
                         <viewControllerLayoutGuide type="bottom" id="dbJ-5i-alW"/>

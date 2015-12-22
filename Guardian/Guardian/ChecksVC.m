@@ -6,14 +6,14 @@
 //  Copyright © 2015 Viktor Sydorenko. All rights reserved.
 //
 
-#import "PointsVC.h"
+#import "ChecksVC.h"
 #import "CheckPointTableCell.h"
 #import "CheckVC.h"
 
-@implementation PointsVC
+@implementation ChecksVC
 
 -(void)viewDidLoad{
-    points = [[CheckPoints alloc] init];
+    checks = [[NSMutableArray alloc] init];
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -23,7 +23,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[points get] count];
+    return [checks count];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -36,9 +36,9 @@
         cell = [[CheckPointTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    CheckPoint *point = [[points get] objectAtIndex:indexPath.row];
+    Check *check = [checks objectAtIndex:indexPath.row];
     
-    [cell.labelName setText:point.Name];
+    [cell.labelName setText:check.Point.Name];
     
     return cell;
 }
@@ -49,8 +49,7 @@
     {
         CheckVC *checkVC = (CheckVC*)segue.destinationViewController;
         NSIndexPath *selectedCellIndex = [_pointsTable indexPathForSelectedRow];
-        Check *check = [[Check alloc] initWith:[[points get] objectAtIndex:selectedCellIndex.row]];
-        checkVC.check = check;
+        checkVC.check = [checks objectAtIndex:selectedCellIndex.row];
     }
 }
 

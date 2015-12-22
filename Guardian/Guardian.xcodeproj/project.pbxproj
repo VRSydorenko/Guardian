@@ -13,9 +13,8 @@
 		7F46297D1C293EA100ED2CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46297B1C293EA100ED2CAF /* Main.storyboard */; };
 		7F46297F1C293EA100ED2CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F46297E1C293EA100ED2CAF /* Assets.xcassets */; };
 		7F4629821C293EA100ED2CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4629801C293EA100ED2CAF /* LaunchScreen.storyboard */; };
-		7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298B1C294C7300ED2CAF /* CheckPoints.m */; };
 		7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298F1C294E4000ED2CAF /* CheckPoint.m */; };
-		7F4629931C29550800ED2CAF /* PointsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629921C29550800ED2CAF /* PointsVC.m */; };
+		7F4629931C29550800ED2CAF /* ChecksVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629921C29550800ED2CAF /* ChecksVC.m */; };
 		7F4629961C296B9700ED2CAF /* CheckPointTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */; };
 		7F4629991C29863A00ED2CAF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629981C29863A00ED2CAF /* DataManager.m */; };
 		AE7199841C29746D00B1C8BB /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7199831C29746D00B1C8BB /* Check.m */; };
@@ -34,12 +33,10 @@
 		7F46297E1C293EA100ED2CAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F4629811C293EA100ED2CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F4629831C293EA100ED2CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F46298A1C294C7300ED2CAF /* CheckPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPoints.h; sourceTree = "<group>"; };
-		7F46298B1C294C7300ED2CAF /* CheckPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPoints.m; sourceTree = "<group>"; };
 		7F46298E1C294E4000ED2CAF /* CheckPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPoint.h; sourceTree = "<group>"; };
 		7F46298F1C294E4000ED2CAF /* CheckPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPoint.m; sourceTree = "<group>"; };
-		7F4629911C29550800ED2CAF /* PointsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsVC.h; sourceTree = "<group>"; };
-		7F4629921C29550800ED2CAF /* PointsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsVC.m; sourceTree = "<group>"; };
+		7F4629911C29550800ED2CAF /* ChecksVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecksVC.h; sourceTree = "<group>"; };
+		7F4629921C29550800ED2CAF /* ChecksVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecksVC.m; sourceTree = "<group>"; };
 		7F4629941C296B9700ED2CAF /* CheckPointTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPointTableCell.h; sourceTree = "<group>"; };
 		7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPointTableCell.m; sourceTree = "<group>"; };
 		7F4629971C29863A00ED2CAF /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -93,8 +90,8 @@
 				7F4629801C293EA100ED2CAF /* LaunchScreen.storyboard */,
 				7F4629831C293EA100ED2CAF /* Info.plist */,
 				7F4629721C293EA100ED2CAF /* Supporting Files */,
-				7F4629911C29550800ED2CAF /* PointsVC.h */,
-				7F4629921C29550800ED2CAF /* PointsVC.m */,
+				7F4629911C29550800ED2CAF /* ChecksVC.h */,
+				7F4629921C29550800ED2CAF /* ChecksVC.m */,
 				7F4629941C296B9700ED2CAF /* CheckPointTableCell.h */,
 				7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */,
 				AE71998B1C297EF600B1C8BB /* CheckVC.h */,
@@ -114,8 +111,6 @@
 		7F4629891C294C3500ED2CAF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7F46298A1C294C7300ED2CAF /* CheckPoints.h */,
-				7F46298B1C294C7300ED2CAF /* CheckPoints.m */,
 				7F4629971C29863A00ED2CAF /* DataManager.h */,
 				7F4629981C29863A00ED2CAF /* DataManager.m */,
 			);
@@ -210,12 +205,11 @@
 				7F4629771C293EA100ED2CAF /* AppDelegate.m in Sources */,
 				7F4629961C296B9700ED2CAF /* CheckPointTableCell.m in Sources */,
 				7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */,
-				7F4629931C29550800ED2CAF /* PointsVC.m in Sources */,
+				7F4629931C29550800ED2CAF /* ChecksVC.m in Sources */,
 				AE7199871C2977AE00B1C8BB /* Tour.m in Sources */,
 				AE71998D1C297EF600B1C8BB /* CheckVC.m in Sources */,
 				7F4629741C293EA100ED2CAF /* main.m in Sources */,
 				7F4629991C29863A00ED2CAF /* DataManager.m in Sources */,
-				7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
