@@ -18,17 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRY-7n-Uag">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="277" y="280" width="47" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="onButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cGS-B2-g3A"/>
+                                    <segue destination="UEW-YR-jnK" kind="show" id="Lxf-fl-fxP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RRY-7n-Uag" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0oQ-5E-sBK"/>
-                            <constraint firstItem="RRY-7n-Uag" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNf-np-tOX"/>
+                            <constraint firstItem="RRY-7n-Uag" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-0.5" id="0oQ-5E-sBK"/>
+                            <constraint firstItem="RRY-7n-Uag" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="dNf-np-tOX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -37,6 +38,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="265" y="350"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ird-4k-R0P">
+            <objects>
+                <viewController id="UEW-YR-jnK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SY7-Ju-paw"/>
+                        <viewControllerLayoutGuide type="bottom" id="dbJ-5i-alW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qb4-at-bMd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qS0-gm-gpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="350"/>
         </scene>
     </scenes>
 </document>
