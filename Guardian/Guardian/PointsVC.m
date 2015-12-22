@@ -7,11 +7,17 @@
 //
 
 #import "PointsVC.h"
+#import "CheckPointTableCell.h"
 
 @implementation PointsVC
 
 -(void)viewDidLoad{
     points = [[CheckPoints alloc] init];
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Check points";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -21,11 +27,11 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [[UITableViewCell alloc] init];
+    CheckPointTableCell* cell = [[CheckPointTableCell alloc] init];
     
     CheckPoint *point = [[points get] objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = point.Name;
+    cell.labelName.text = point.Name;
     
     return cell;
 }
