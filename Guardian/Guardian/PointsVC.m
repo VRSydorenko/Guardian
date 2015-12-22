@@ -8,6 +8,7 @@
 
 #import "PointsVC.h"
 #import "CheckPointTableCell.h"
+#import "CheckVC.h"
 
 @implementation PointsVC
 
@@ -40,6 +41,17 @@
     [cell.labelName setText:point.Name];
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"segueCheckCellToDetails"])
+    {
+        CheckVC *checkVC = (CheckVC*)segue.destinationViewController;
+        NSIndexPath *selectedCellIndex = [_pointsTable indexPathForSelectedRow];
+        Check *check = [[Check alloc] initWith:[[points get] objectAtIndex:selectedCellIndex.row]];
+        checkVC.check = check;
+    }
 }
 
 @end

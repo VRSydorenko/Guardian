@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUq-tn-8rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="-302"/>
+            <point key="canvasLocation" x="1839" y="343"/>
         </scene>
         <!--PointsVC-->
         <scene sceneID="ird-4k-R0P">
@@ -113,7 +113,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="arc-sb-kA0" id="ZNs-mi-HOe">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-YG-L8w">
@@ -160,6 +160,7 @@
                                             <outlet property="labelComment" destination="7nt-Ml-BWf" id="t8l-jK-W5N"/>
                                             <outlet property="labelDatetime" destination="tAx-YG-L8w" id="HBM-8E-qcF"/>
                                             <outlet property="labelName" destination="W3X-Ib-8Jl" id="nQR-gT-Fyn"/>
+                                            <segue destination="Mcg-Pg-3g9" kind="show" identifier="segueCheckCellToDetails" id="pVf-tS-69T"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
