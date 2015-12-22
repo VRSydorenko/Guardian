@@ -38,7 +38,12 @@
     
     Check *check = [checks objectAtIndex:indexPath.row];
     
-    [cell.labelName setText:check.Point.Name];
+    cell.labelName.text = check.Point.Name;
+    cell.labelComment.text = check.Comment;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd.mm.yy HH.MM"];
+    NSString *formattedDate = check.CheckDate == nil ? @"" : [formatter stringFromDate:check.CheckDate];
+    cell.labelDatetime.text = formattedDate;
     
     return cell;
 }
