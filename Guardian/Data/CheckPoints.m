@@ -14,7 +14,13 @@
 {
     NSDictionary* points = [[NSDictionary alloc] init];
     
+    CheckPoint *point1 = [[CheckPoint alloc] init];
+    point1.Name = @"Receptoin";
+    [points setValue:point1 forKey:@"1"];
     
+    CheckPoint *point2 = [[CheckPoint alloc] init];
+    point2.Name = @"WC";
+    [points setValue:point2 forKey:@"2"];
     
     return points;
 }

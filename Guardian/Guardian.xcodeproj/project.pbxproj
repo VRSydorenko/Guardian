@@ -14,6 +14,7 @@
 		7F46297F1C293EA100ED2CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F46297E1C293EA100ED2CAF /* Assets.xcassets */; };
 		7F4629821C293EA100ED2CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4629801C293EA100ED2CAF /* LaunchScreen.storyboard */; };
 		7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298B1C294C7300ED2CAF /* CheckPoints.m */; };
+		7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298F1C294E4000ED2CAF /* CheckPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		7F4629831C293EA100ED2CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F46298A1C294C7300ED2CAF /* CheckPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPoints.h; sourceTree = "<group>"; };
 		7F46298B1C294C7300ED2CAF /* CheckPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPoints.m; sourceTree = "<group>"; };
+		7F46298E1C294E4000ED2CAF /* CheckPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPoint.h; sourceTree = "<group>"; };
+		7F46298F1C294E4000ED2CAF /* CheckPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 		7F4629661C293EA000ED2CAF = {
 			isa = PBXGroup;
 			children = (
+				7F46298D1C294DFD00ED2CAF /* Model */,
 				7F4629891C294C3500ED2CAF /* Data */,
 				7F4629711C293EA000ED2CAF /* Guardian */,
 				7F4629701C293EA000ED2CAF /* Products */,
@@ -90,6 +94,15 @@
 				7F46298B1C294C7300ED2CAF /* CheckPoints.m */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		7F46298D1C294DFD00ED2CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F46298E1C294E4000ED2CAF /* CheckPoint.h */,
+				7F46298F1C294E4000ED2CAF /* CheckPoint.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +177,7 @@
 			files = (
 				7F46297A1C293EA100ED2CAF /* ViewController.m in Sources */,
 				7F4629771C293EA100ED2CAF /* AppDelegate.m in Sources */,
+				7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */,
 				7F4629741C293EA100ED2CAF /* main.m in Sources */,
 				7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */,
 			);

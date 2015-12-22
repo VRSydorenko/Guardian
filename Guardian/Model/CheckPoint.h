@@ -1,5 +1,5 @@
 //
-//  CheckPoints.h
+//  CheckPoint.h
 //  Guardian
 //
 //  Created by VRS on 22/12/15.
@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CheckPoint.h"
 
-@interface CheckPoints : NSObject
+@interface CheckPoint : NSObject
 
--(NSDictionary*)get;
+@property NSString* Name;
 
 @end
