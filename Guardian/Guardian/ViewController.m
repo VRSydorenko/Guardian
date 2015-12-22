@@ -21,7 +21,7 @@
     tour = [dataManager getTour];
     
     NSString *buttonTitle = tour == nil ? @"Start" : @"Continue";
-    [_button setTitle:buttonTitle forState:UIControlStateNormal];
+    [_buttonTour setTitle:buttonTitle forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

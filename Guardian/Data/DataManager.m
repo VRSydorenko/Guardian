@@ -29,10 +29,14 @@
 {
     __block Tour *tour;
     
-    NSURL *url = [NSURL URLWithString:@"http://hack.innofriends.at:8080/tour"];
+    NSString *strURL = @"http://hack.innofriends.at:8080/tour";
+    NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
+    NSString *result = [strURL stringByAddingPercentEncodingWithAllowedCharacters:set];
+    
+    NSURL *url = [NSURL URLWithString:result];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *connectionError)
     {
           if (data.length > 0 && connectionError == nil)
@@ -53,6 +57,7 @@
               //[[data objectForKey:@"id"] stringValue];
           }
       }];
+    [task resume];
     
     return tour;
 }
