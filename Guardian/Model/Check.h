@@ -9,17 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "CheckPoint.h"
 
-#define NotVisited 0
-#define OK 1
-#define NOK 2
+#define NOT_VISITED @"NOT_VISITED"
+#define OK @"OK"
+#define NOK @"NOK"
 
 @interface Check : NSObject
 
+@property int CheckId;
 @property CheckPoint *Point;
-@property    NSString *Comment;
+@property NSString *Comment;
 @property NSDate *CheckDate;
-@property    int Status;
+@property NSString *Status;
 
--(id)initWith:(CheckPoint*) checkPoint;
+-(id)initWith:(CheckPoint*)checkPoint;
 
 @end

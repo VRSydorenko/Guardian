@@ -7,27 +7,21 @@
 //
 
 #import "Tour.h"
-#import "CheckPoint.h"
-#import "Check.h"
 
 @implementation Tour
 
--(id)initWith:(NSMutableArray *) checkPoints
+-(id)init
 {
-    self = [super init];
-    
-    if (self != nil)
+    if (self = [super init])
     {
-        _Checks = [[NSMutableArray alloc] init];
-        for (CheckPoint *point in checkPoints)
-        {
-            Check *check = [[Check alloc] initWith:point];
-            [_Checks addObject:check];
-        }
+        self.Checks = [[NSMutableArray alloc] init];
     }
-    
     return self;
-    
+}
+
+-(void)addCheck:(Check*)check
+{
+    [self.Checks addObject:check];
 }
 
 @end

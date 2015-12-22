@@ -11,20 +11,16 @@
 
 @interface CheckVC : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *labelName;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonOK;
-@property (weak, nonatomic) IBOutlet UIButton *buttonNOK;
-
-@property (weak, nonatomic) IBOutlet UITextView *textComment;
-
-
 @property Check *check;
 
-- (IBAction)OnOk:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UIButton *buttonOK;
+@property (weak, nonatomic) IBOutlet UIButton *buttonNOK;
+@property (weak, nonatomic) IBOutlet UITextView *textComment;
 
+- (IBAction)OnOk:(id)sender;
 - (IBAction)OnNok:(id)sender;
 
-- (void)Save:(int)status;
+- (void)Save;
 
 @end

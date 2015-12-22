@@ -9,13 +9,17 @@
 #import "DataManager.h"
 #import "CheckPoint.h"
 
+//#define SERVER @"http://localhost:8080/"
+#define SERVER @"http://hack.innofriends.at:8080/"
+
 @implementation DataManager
 
 -(void)getTour
 {
     if (currentTour == nil)
     {
-        [self fetchTour:@"http://hack.innofriends.at:8080/tour"];
+        NSString *url = [NSString stringWithFormat:@"%@tour", SERVER];
+        [self fetchTour:url];
     }
     else
     {
@@ -35,13 +39,11 @@
         return;
     }
     
-    [self fetchTour:@"http://hack.innofriends.at:8080/tour/start"];
+    [self fetchTour:[NSString stringWithFormat:@"%@tour/start", SERVER]];
 }
 
 - (void)fetchTour:(NSString*)url;
 {
-    __block Tour *tour;
-    
     NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
     NSString *result = [url stringByAddingPercentEncodingWithAllowedCharacters:set];
     
@@ -51,60 +53,64 @@
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *connectionError)
     {
-          if (data.length > 0 && connectionError == nil)
-          {
-              NSDictionary *values = [NSJSONSerialization JSONObjectWithData:data
-                                                                     options:0
-                                                                       error:NULL];
-              
-              // id
-              int tourId = [[values objectForKey:@"id"] intValue];
-              
-              // points
-              NSData *pointData = [values objectForKey:@"tourCheckpoints"];
-              if (pointData != nil)
-              {
-                  NSMutableArray *points = [[NSMutableArray alloc] init];
-                  for (NSDictionary *pointDict in pointData)
-                  {
-                      int checkId = [[pointDict objectForKey:@"id"] intValue];
-                      
-                      NSDictionary *checkpointData = [pointDict objectForKey:@"checkpoint"];
-                      int actPointId = [[checkpointData objectForKey:@"id"] intValue];
-                      NSString *pointName = [checkpointData objectForKey:@"name"];
-                      
-                      NSString *pointStatus = [pointDict objectForKey:@"status"];
-                      NSString *pointTimeStr = [pointDict objectForKey:@"timestamp"];
-                      if (pointTimeStr != nil && ![pointTimeStr isKindOfClass:[NSNull class]])
-                      {
-                          NSDate *time = [[NSDate alloc] init]; // later
-                      }
-                      else {
-                          pointTimeStr = @"";
-                      }
-                      NSString *pointComment = [pointDict objectForKey:@"comment"];
-                      if (pointComment != nil && ![pointComment isKindOfClass:[NSNull class]] && [pointComment length] > 0)
-                      {
-                          pointComment = @""; // later
-                      }
-                      else {
-                          pointComment = @"";
-                      }
-                      
-                      CheckPoint *pt = [[CheckPoint alloc] init];
-                      pt.Name = pointName;
-                      
-                      [points addObject:pt];
-                  }
-                  currentTour = [[Tour alloc] initWith:points];
-                  [_delegate onTourFetched:(currentTour)];
-              }
-              //[[data objectForKey:@"id"] stringValue];
-          }
-        else
+        currentTour = nil;
+        if (data.length > 0 && connectionError == nil)
         {
-            [_delegate onTourFetched:(nil)];
-        }
+            currentTour = [[Tour alloc] init];
+            
+            NSDictionary *values = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        
+            // id
+            currentTour.TourId = [[values objectForKey:@"id"] intValue];
+              
+            // start timestamp
+            NSString *tourStartTime = [values objectForKey:@"startTime"];
+            if (tourStartTime != nil && ![tourStartTime isKindOfClass:[NSNull class]])
+            {
+                currentTour.StartTime = [NSDate dateWithTimeIntervalSince1970:[tourStartTime longLongValue]];
+            }
+              
+            // points
+            NSData *pointData = [values objectForKey:@"tourCheckpoints"];
+            if (pointData != nil)
+            {
+                for (NSDictionary *pointDict in pointData)
+                {
+                    Check* check = [[Check alloc] init];
+                    
+                    // check id
+                    check.CheckId = [[pointDict objectForKey:@"id"] intValue];
+                    
+                    // check status
+                    check.Status = [pointDict objectForKey:@"status"];
+                      
+                    // check timestamp
+                    NSString *pointTimeStr = [pointDict objectForKey:@"timestamp"];
+                    if (pointTimeStr != nil && ![pointTimeStr isKindOfClass:[NSNull class]])
+                    {
+                        check.CheckDate = [NSDate dateWithTimeIntervalSince1970:[pointTimeStr longLongValue]];
+                    }
+                      
+                    // check comment
+                    check.Comment = @"";
+                    NSString *pointComment = [pointDict objectForKey:@"comment"];
+                    if (pointComment != nil && ![pointComment isKindOfClass:[NSNull class]])
+                    {
+                        check.Comment = pointComment;
+                    }
+                      
+                    // check point
+                    CheckPoint *pt = [[CheckPoint alloc] init];
+                    NSDictionary *checkpointData = [pointDict objectForKey:@"checkpoint"];
+                    pt.PointId = [[checkpointData objectForKey:@"id"] intValue];
+                    pt.Name = [checkpointData objectForKey:@"name"];
+                    check.Point = pt;
+                      
+                    [currentTour addCheck:check];
+                }
+            }
+          }
+        [_delegate onTourFetched:(currentTour)];
       }];
     [task resume];
 }

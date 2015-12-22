@@ -10,6 +10,7 @@
 
 @interface CheckPoint : NSObject
 
+@property int PointId;
 @property NSString* Name;
 
 @end

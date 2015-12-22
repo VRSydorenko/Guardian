@@ -47,10 +47,18 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    Tour *tour = [dataManager getCurrentTour];
     if ([segue.identifier isEqualToString:@"segueMainToTour"])
     {
-        ChecksVC *checksVC = (ChecksVC*)segue.destinationViewController;
-        checksVC.currentTour = [dataManager getCurrentTour];
+        if (tour == nil)
+        {
+            // TODO: cancel segue
+        }
+        else
+        {
+            ChecksVC *checksVC = (ChecksVC*)segue.destinationViewController;
+            checksVC.currentTour = tour;
+        }
     }
 }
 

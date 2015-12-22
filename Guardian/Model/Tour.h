@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Check.h"
 
 @interface Tour : NSObject
 
--(id)initWith:(NSMutableArray *)checkPoints;
+-(void)addCheck:(Check*)check;
 
+@property int TourId;
+@property NSDate *StartTime;
 @property NSMutableArray *Checks;
 
 @end
