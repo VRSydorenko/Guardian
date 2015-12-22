@@ -17,6 +17,7 @@
 		7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298F1C294E4000ED2CAF /* CheckPoint.m */; };
 		7F4629931C29550800ED2CAF /* PointsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629921C29550800ED2CAF /* PointsVC.m */; };
 		7F4629961C296B9700ED2CAF /* CheckPointTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */; };
+		AE7199841C29746D00B1C8BB /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = AE7199831C29746D00B1C8BB /* Check.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		7F4629921C29550800ED2CAF /* PointsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsVC.m; sourceTree = "<group>"; };
 		7F4629941C296B9700ED2CAF /* CheckPointTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPointTableCell.h; sourceTree = "<group>"; };
 		7F4629951C296B9700ED2CAF /* CheckPointTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPointTableCell.m; sourceTree = "<group>"; };
+		AE7199821C29746D00B1C8BB /* Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Check.h; sourceTree = "<group>"; };
+		AE7199831C29746D00B1C8BB /* Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Check.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 		7F46298D1C294DFD00ED2CAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE7199821C29746D00B1C8BB /* Check.h */,
+				AE7199831C29746D00B1C8BB /* Check.m */,
 				7F46298E1C294E4000ED2CAF /* CheckPoint.h */,
 				7F46298F1C294E4000ED2CAF /* CheckPoint.m */,
 			);
@@ -185,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7199841C29746D00B1C8BB /* Check.m in Sources */,
 				7F46297A1C293EA100ED2CAF /* ViewController.m in Sources */,
 				7F4629771C293EA100ED2CAF /* AppDelegate.m in Sources */,
 				7F4629961C296B9700ED2CAF /* CheckPointTableCell.m in Sources */,
@@ -338,6 +344,7 @@
 				7F4629881C293EA100ED2CAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
