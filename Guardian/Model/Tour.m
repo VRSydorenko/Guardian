@@ -18,10 +18,11 @@
     
     if (self != nil)
     {
+        _Checks = [[NSMutableArray alloc] init];
         for (CheckPoint *point in checkPoints)
         {
             Check *check = [[Check alloc] initWith:point];
-            [self.Checks addObject:check];
+            [_Checks addObject:check];
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ChecksVC.h"
 
 @interface ViewController ()
 
@@ -28,6 +29,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         NSString *buttonTitle = tour == nil ? @"Start" : @"Continue";
         [_buttonTour setTitle:buttonTitle forState:UIControlStateNormal];
+        _buttonTour.hidden = NO;
     });
 }
 
@@ -42,4 +44,14 @@
         [dataManager startTour];
     }
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"segueMainToTour"])
+    {
+        ChecksVC *checksVC = (ChecksVC*)segue.destinationViewController;
+        checksVC.currentTour = [dataManager getCurrentTour];
+    }
+}
+
 @end

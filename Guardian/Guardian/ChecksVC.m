@@ -13,7 +13,7 @@
 @implementation ChecksVC
 
 -(void)viewDidLoad{
-    checks = [[NSMutableArray alloc] init];
+    checks = self.currentTour.Checks;
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

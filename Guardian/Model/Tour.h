@@ -12,7 +12,6 @@
 
 -(id)initWith:(NSMutableArray *)checkPoints;
 
-@property int id;
 @property NSMutableArray *Checks;
 
 @end

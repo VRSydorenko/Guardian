@@ -24,6 +24,7 @@
                                 <state key="normal" title="Loading..."/>
                                 <connections>
                                     <action selector="onButtonTour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b04-jo-QKm"/>
+                                    <segue destination="UEW-YR-jnK" kind="show" identifier="segueMainToTour" id="Aed-9q-c4E"/>
                                 </connections>
                             </button>
                         </subviews>
