@@ -18,13 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-34-bng">
-                                <rect key="frame" x="196" y="265" width="209" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-34-bng">
+                                <rect key="frame" x="233" y="275" width="135" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Hello"/>
+                                <state key="normal" title="Loading..."/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Asq-34-bng" firstAttribute="centerX" secondItem="Mzj-1F-1HV" secondAttribute="centerX" id="jSL-3e-SAW"/>
+                            <constraint firstItem="Asq-34-bng" firstAttribute="centerY" secondItem="Mzj-1F-1HV" secondAttribute="centerY" id="wVM-R7-Brj"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonTour" destination="Asq-34-bng" id="tXN-p8-BhR"/>

@@ -15,17 +15,24 @@
 {
     if (self = [super init])
     {
-        currentTour = [self fetchTour];
+        
     }
     return self;
 }
 
--(Tour*)getTour
+-(void)getTour
 {
-    return currentTour;
+    if (currentTour == nil)
+    {
+        [self fetchTour];
+    }
+    else
+    {
+        [self.delegate onTourFetched:currentTour];
+    }
 }
 
-- (Tour*)fetchTour;
+- (void)fetchTour;
 {
     __block Tour *tour;
     
@@ -84,14 +91,17 @@
                       
                       [points addObject:pt];
                   }
-                  tour = [[Tour alloc] initWith:points];
+                  currentTour = [[Tour alloc] initWith:points];
+                  [_delegate onTourFetched:(currentTour)];
               }
               //[[data objectForKey:@"id"] stringValue];
           }
+        else
+        {
+            [_delegate onTourFetched:(nil)];
+        }
       }];
     [task resume];
-    
-    return tour;
 }
 
 @end

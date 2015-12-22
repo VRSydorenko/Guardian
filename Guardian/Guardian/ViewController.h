@@ -10,10 +10,9 @@
 #import "DataManager.h"
 #import "Tour.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <RemoteDataDelegate>
 {
     DataManager *dataManager;
-    Tour *tour;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonTour;

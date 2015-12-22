@@ -18,15 +18,17 @@
     [super viewDidLoad];
     
     dataManager = [[DataManager alloc] init];
-    tour = [dataManager getTour];
+    dataManager.delegate = self;
+    [dataManager getTour];
     
-    NSString *buttonTitle = tour == nil ? @"Start" : @"Continue";
-    [_buttonTour setTitle:buttonTitle forState:UIControlStateNormal];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)onTourFetched:(Tour *)tour
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSString *buttonTitle = tour == nil ? @"Start" : @"Continue";
+        [_buttonTour setTitle:buttonTitle forState:UIControlStateNormal];
+    });
 }
 
 - (IBAction)onButtonDown:(id)sender {

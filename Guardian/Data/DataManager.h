@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Tour.h"
 
+@protocol RemoteDataDelegate <NSObject>
+-(void)onTourFetched:(Tour*)tour;
+@end
 
 @interface DataManager : NSObject
 {
@@ -16,6 +19,8 @@
     bool requestInProgress;
 }
 
--(Tour*)getTour;
+@property id<RemoteDataDelegate> delegate;
+
+-(void)getTour;
 
 @end
