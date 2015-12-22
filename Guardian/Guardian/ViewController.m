@@ -24,4 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onButtonDown:(id)sender {
+    [sender setTitle:@"Hello" forState:UIControlStateNormal];
+}
+
+
 @end
