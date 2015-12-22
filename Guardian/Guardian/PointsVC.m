@@ -24,6 +24,7 @@
     UITableViewCell* cell = [[UITableViewCell alloc] init];
     
     CheckPoint *point = [[points get] objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = point.Name;
     
     return cell;
