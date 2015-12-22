@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataManager.h"
+#import "Tour.h"
 
 @interface ViewController : UIViewController
+{
+    DataManager *dataManager;
+    Tour *tour;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *button;
 

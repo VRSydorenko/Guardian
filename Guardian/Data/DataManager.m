@@ -29,7 +29,7 @@
 {
     __block Tour *tour;
     
-    NSURL *url = [NSURL URLWithString:@"http://"];
+    NSURL *url = [NSURL URLWithString:@"http://hack.innofriends.at:8080/tour"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:

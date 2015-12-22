@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    dataManager = [[DataManager alloc] init];
+    tour = [dataManager getTour];
+    
+    NSString *buttonTitle = tour == nil ? @"Start" : @"Continue";
+    [_button setTitle:buttonTitle forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
