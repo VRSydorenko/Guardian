@@ -16,8 +16,8 @@
     
     if (self != nil)
     {
-        self->Point = checkPoint;
-        self->Status = NotVisited;
+        _Point = checkPoint;
+        _Status = NotVisited;
     }
     
     return self;

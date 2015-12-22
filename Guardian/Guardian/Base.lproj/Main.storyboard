@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="350"/>
+            <point key="canvasLocation" x="177" y="418"/>
         </scene>
         <!--CheckVC-->
         <scene sceneID="CrL-IB-5yL">
@@ -56,20 +56,38 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDG-Ru-AVy">
                                 <rect key="frame" x="44" y="110" width="30" height="30"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="OnOk:" destination="Mcg-Pg-3g9" eventType="touchDown" id="1Xw-7j-ssP"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-de-R3Y">
-                                <rect key="frame" x="138" y="110" width="32" height="30"/>
-                                <state key="normal" title="NOK"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J27-gg-b9v">
-                                <rect key="frame" x="44" y="28" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="check-point name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J27-gg-b9v">
+                                <rect key="frame" x="44" y="40" width="139" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fc-L7-kqN">
+                                <rect key="frame" x="44" y="173" width="216" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="write a comment"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-de-R3Y">
+                                <rect key="frame" x="128" y="110" width="32" height="30"/>
+                                <state key="normal" title="NOK"/>
+                                <connections>
+                                    <action selector="OnNok:" destination="Mcg-Pg-3g9" eventType="touchDown" id="9lp-zx-0py"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonNOK" destination="j5l-de-R3Y" id="LKT-Z5-lxk"/>
+                        <outlet property="buttonOK" destination="sDG-Ru-AVy" id="2UT-hw-QFC"/>
+                        <outlet property="labelName" destination="J27-gg-b9v" id="Fcl-cp-Yz9"/>
+                        <outlet property="textComment" destination="7fc-L7-kqN" id="e4x-Tg-xc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUq-tn-8rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +113,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="arc-sb-kA0" id="ZNs-mi-HOe">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datetime" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-YG-L8w">

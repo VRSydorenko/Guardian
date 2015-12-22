@@ -14,12 +14,11 @@
 #define NOK 2
 
 @interface Check : NSObject
-{
-    CheckPoint *Point;
-    NSString *Comment;
-    NSDate *CheckDate;
-    int Status;
-}
+
+@property CheckPoint *Point;
+@property    NSString *Comment;
+@property NSDate *CheckDate;
+@property    int Status;
 
 -(id)initWith:(CheckPoint*) checkPoint;
 
