@@ -15,6 +15,7 @@
 		7F4629821C293EA100ED2CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4629801C293EA100ED2CAF /* LaunchScreen.storyboard */; };
 		7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298B1C294C7300ED2CAF /* CheckPoints.m */; };
 		7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46298F1C294E4000ED2CAF /* CheckPoint.m */; };
+		7F4629931C29550800ED2CAF /* PointsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629921C29550800ED2CAF /* PointsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		7F46298B1C294C7300ED2CAF /* CheckPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPoints.m; sourceTree = "<group>"; };
 		7F46298E1C294E4000ED2CAF /* CheckPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPoint.h; sourceTree = "<group>"; };
 		7F46298F1C294E4000ED2CAF /* CheckPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPoint.m; sourceTree = "<group>"; };
+		7F4629911C29550800ED2CAF /* PointsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsVC.h; sourceTree = "<group>"; };
+		7F4629921C29550800ED2CAF /* PointsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				7F4629801C293EA100ED2CAF /* LaunchScreen.storyboard */,
 				7F4629831C293EA100ED2CAF /* Info.plist */,
 				7F4629721C293EA100ED2CAF /* Supporting Files */,
+				7F4629911C29550800ED2CAF /* PointsVC.h */,
+				7F4629921C29550800ED2CAF /* PointsVC.m */,
 			);
 			path = Guardian;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				7F46297A1C293EA100ED2CAF /* ViewController.m in Sources */,
 				7F4629771C293EA100ED2CAF /* AppDelegate.m in Sources */,
 				7F4629901C294E4000ED2CAF /* CheckPoint.m in Sources */,
+				7F4629931C29550800ED2CAF /* PointsVC.m in Sources */,
 				7F4629741C293EA100ED2CAF /* main.m in Sources */,
 				7F46298C1C294C7300ED2CAF /* CheckPoints.m in Sources */,
 			);

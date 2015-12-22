@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="UEW-YR-jnK" kind="show" id="Lxf-fl-fxP"/>
+                                    <segue destination="UEW-YR-jnK" kind="showDetail" action="showViewController:sender:" id="Lxf-fl-fxP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="265" y="350"/>
         </scene>
-        <!--View Controller-->
+        <!--PointsVC-->
         <scene sceneID="ird-4k-R0P">
             <objects>
-                <viewController id="UEW-YR-jnK" sceneMemberID="viewController">
+                <viewController id="UEW-YR-jnK" customClass="PointsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SY7-Ju-paw"/>
                         <viewControllerLayoutGuide type="bottom" id="dbJ-5i-alW"/>
@@ -58,16 +59,27 @@
                                     <constraint firstAttribute="width" constant="101" id="3xl-kE-ZVi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2m-KC-Jcc">
+                                <rect key="frame" x="0.0" y="57" width="600" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UEW-YR-jnK" id="NQ2-H1-zyj"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jGq-Xw-6wZ" firstAttribute="centerY" secondItem="qb4-at-bMd" secondAttribute="centerY" constant="-261.5" id="5vY-JA-P4O"/>
                             <constraint firstItem="jGq-Xw-6wZ" firstAttribute="centerX" secondItem="qb4-at-bMd" secondAttribute="centerX" id="CQc-cd-jXZ"/>
                             <constraint firstItem="dbJ-5i-alW" firstAttribute="top" secondItem="jGq-Xw-6wZ" secondAttribute="bottom" constant="551" id="ECq-Bh-KyY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s2m-KC-Jcc" secondAttribute="trailing" constant="-20" id="KM9-Wv-wSG"/>
                             <constraint firstItem="jGq-Xw-6wZ" firstAttribute="centerX" secondItem="qb4-at-bMd" secondAttribute="centerX" id="OrK-7I-AuQ"/>
+                            <constraint firstItem="dbJ-5i-alW" firstAttribute="top" secondItem="s2m-KC-Jcc" secondAttribute="bottom" id="ejy-9Y-O9D"/>
+                            <constraint firstItem="s2m-KC-Jcc" firstAttribute="leading" secondItem="qb4-at-bMd" secondAttribute="leadingMargin" constant="-20" id="m3x-ZQ-VG7"/>
+                            <constraint firstItem="s2m-KC-Jcc" firstAttribute="top" secondItem="jGq-Xw-6wZ" secondAttribute="bottom" constant="8" id="seB-h0-2RD"/>
                             <constraint firstItem="jGq-Xw-6wZ" firstAttribute="top" secondItem="SY7-Ju-paw" secondAttribute="bottom" constant="8" symbolic="YES" id="uGQ-hx-1UU"/>
                         </constraints>
                         <variation key="default">
@@ -78,6 +90,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="pointsTable" destination="s2m-KC-Jcc" id="m1K-X2-1j4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qS0-gm-gpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
